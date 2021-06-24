@@ -12,7 +12,7 @@
 #每日抽奖(活动时间：2021-05-01至2021-05-31)
 13 1,22,23 * * * node /scripts/jd_daily_lottery.js >> /scripts/logs/jd_daily_lottery.log 2>&1
 #点点券 
-10 0,20 * * * node /scripts/jd_necklace.jss >> /scripts/logs/jd_necklace.log 2>&1
+#10 0,20 * * * node /scripts/jd_necklace.jss >> /scripts/logs/jd_necklace.log 2>&1
  
 #金榜创造营 活动时间：2021-05-21至2021-12-31
 0 1,22 * * * node /scripts/jd_gold_creator.js >> /scripts/logs/jd_gold_creator.log 2>&1
@@ -124,4 +124,5 @@
 # 领金贴
 5 0 * * * node /scripts/jd_jin_tie.js >> /scripts/logs/jd_jin_tie.log 2>&1
 #京喜牧场
-15 0,12,22 * * * node /scripts/jd_jxmc.js >> /scripts/logs/jd_jxmc.log 2>&1
+15 0,12,22 * * * node /scripts/jd_jxmc.js  >> /scripts/logs/jd_jxmc.log 2>&1
+1 8,12,18 * * * node /scripts/jd_bookshop.js >> /scripts/logs/jd_bookshop.log 2>&1
