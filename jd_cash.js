@@ -30,8 +30,7 @@ let cookiesArr = [], cookie = '', message;
 let helpAuthor = true;
 const randomCount = $.isNode() ? 5 : 5;
 let cash_exchange = false;//是否消耗2元红包兑换200京豆，默认否
-const inviteCodes = []
-$.authorCode = []
+const inviteCodes = ['']
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item])
@@ -48,7 +47,7 @@ let allMessage = '';
     return;
   }
   await requireConfig()
-  // await getAuthorShareCode();
+  await getAuthorShareCode();
   await getAuthorShareCode2();
   for (let i = 0; i < cookiesArr.length; i++) {
     if (cookiesArr[i]) {
@@ -356,9 +355,10 @@ function readShareCode() {
           console.log(`${JSON.stringify(err)}`)
           console.log(`${$.name} API请求失败，请检查网路重试`)
         } else {
-          if (data) {
-            console.log(`随机取${randomCount}个码放到您固定的互助码后面(不影响已有固定互助)`)
-            data = []
+          // if (data) {
+          //   console.log(`随机取${randomCount}个码放到您固定的互助码后面(不影响已有固定互助)`)
+          //   data = JSON.parse(data);
+          data = []  
           }
         }
       } catch (e) {
