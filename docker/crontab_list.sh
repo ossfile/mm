@@ -125,4 +125,5 @@
 5 0 * * * node /scripts/jd_jin_tie.js >> /scripts/logs/jd_jin_tie.log 2>&1
 #京喜牧场
 15 0,12,22 * * * node /scripts/jd_jxmc.js  >> /scripts/logs/jd_jxmc.log 2>&1
+#口袋书店
 1 8,12,18 * * * node /scripts/jd_bookshop.js >> /scripts/logs/jd_bookshop.log 2>&1
